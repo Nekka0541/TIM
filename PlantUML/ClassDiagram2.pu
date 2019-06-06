@@ -1,0 +1,15 @@
+@startuml
+interface Printable << interface >>
+interface Printable{
+    {abstract} void print()
+    {abstract} void newpage()
+}
+class PrintClass{
+    void print()
+    void newpage()
+}
+Printable <|.. PrintClass
+note as n1
+    インターフェースの実装（implements）は白抜き矢印と点線で表現される
+end note
+@enduml

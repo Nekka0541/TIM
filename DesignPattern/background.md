@@ -13,7 +13,21 @@
 ### UML
 Unified Modeling Languageの略でシステムの可視化、仕様や設計を文書化するための表現方法
 
-`クラス図`
+`基本的なクラス図`
+
+![img1](./img/ClassDiagram1.png)
+
+`インターフェースの実装`
+
+![img2](./img/ClassDiagram2.png)
+
+`集約を表したクラス図`
+
+Basketクラスのfruitsフィールドは、Fruitクラスの配列になっていて、BasketクラスのインスタンスはFruitクラスのインスタンスを複数個もっている。
+この様な「持っている」関係を「**集約**(aggregation)」という。インスタンスを持っていれば個数にかかわらず集約の関係にある。
+白抜きのひし形戦は集約を表す。
+![img3](./img/ClassDiagram3.png)
+
 
 
 ### デザインパターンを学ぶ前に

@@ -1,0 +1,17 @@
+@startuml
+class Color{
+}
+class Fruit{
+    Color color
+}
+class Basket{
+    Fruit[] fruits
+}
+
+Color <--o Fruit
+Fruit <--o Basket
+note as n1
+    集約は持っている側がひし形、
+    先がアローになってる
+end note
+@enduml
