@@ -24,8 +24,10 @@ Unified Modeling Languageの略でシステムの可視化、仕様や設計を�
 `集約を表したクラス図`
 
 Basketクラスのfruitsフィールドは、Fruitクラスの配列になっていて、BasketクラスのインスタンスはFruitクラスのインスタンスを複数個もっている。
+
 この様な「持っている」関係を「**集約**(aggregation)」という。インスタンスを持っていれば個数にかかわらず集約の関係にある。
 白抜きのひし形戦は集約を表す。
+
 ![img3](./img/ClassDiagram3.png)
 
 
