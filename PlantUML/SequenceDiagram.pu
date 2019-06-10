@@ -1,0 +1,9 @@
+@startuml
+[-> Client: work
+Client -> Server : open
+Server --> Client : open
+Client -> Server : print
+Client -> Server : close
+
+
+@enduml

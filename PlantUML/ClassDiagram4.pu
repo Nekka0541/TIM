@@ -1,0 +1,14 @@
+@startuml
+skinparam classAttributeIconSize 0
+class Something{
+    -int privateField
+    #int protectedField
+    +int publicField
+    ~int packageField
+
+    -void privateMethod()
+    #void protectedMethod()
+    +void publicMethod()
+    ~void packageMethod()
+}
+@enduml

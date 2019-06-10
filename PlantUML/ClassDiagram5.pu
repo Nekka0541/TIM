@@ -1,0 +1,24 @@
+@startuml
+class Client
+class Target
+class Factory
+class Product
+class Subject
+class Observer
+
+Client -> Target : Uses >
+Factory -> Product : Creates >
+Subject -> Observer : Notifies >
+note as n1
+    ClientがTargetを使用する
+end note
+n1 -up-> Client
+note as n2
+    FactoryがProductを生成する
+end note
+n2 -up-> Factory
+note as n3
+    SubjectがObserverに通知する
+end note
+n3 -up-> Subject
+@enduml

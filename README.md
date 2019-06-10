@@ -31,3 +31,4 @@
 - [クラス図1](./PlantUML/ClassDiagram1.pu)
 - [クラス図2](./PlantUML/ClassDiagram2.pu)
 - [クラス図3](./PlantUML/ClassDiagram3.pu)
+- [クラス図4](./PlantUML/ClassDiagram4.pu)
