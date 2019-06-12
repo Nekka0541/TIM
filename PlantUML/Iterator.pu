@@ -1,0 +1,37 @@
+@startuml
+skinparam classAttributeIconSize 0
+interface Aggregate << interface >>{
+    {abstract} iterator()
+}
+interface Iterator << interface >>{
+    {abstract} boolean hasNext()
+    {abstract} object next()
+}
+class Book{
+    -name
+
+    +getName()
+}
+class BookShelf{
+    -books
+    -last
+
+    +getBookAt()
+    +appendBook()
+    +getLength()
+    +iterator()
+}
+class BookShelfIterator{
+    -bookshelf
+    -index
+
+    +hasNext()
+    +next()
+
+}
+Aggregate <|.down. BookShelf
+Book <-down-o BookShelf
+BookShelf <-left-o BookShelfIterator
+Iterator <|.down. BookShelfIterator
+Aggregate -> Iterator : Creates >
+@enduml
