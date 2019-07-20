@@ -1,0 +1,63 @@
+{
+    // IntelliSense を使用して利用可能な属性を学べます。
+    // 既存の属性の説明をホバーして表示します。
+    // 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - lesson",
+            "request": "launch",
+            "mainClass": "stringb.lesson",
+            "projectName": "StringOperation"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Main",
+            "request": "launch",
+            "mainClass": "stringb.Main",
+            "projectName": "StringOperation"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - sb",
+            "request": "launch",
+            "mainClass": "Java.StringOperation.src.stringb.sb",
+            "projectName": "TIM_8160a9c1"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - sb",
+            "request": "launch",
+            "mainClass": "Java.StringOperation.src.app.sb",
+            "projectName": "TIM_8160a9c1"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - App",
+            "request": "launch",
+            "mainClass": "Java.StringOperation.src.app.App",
+            "projectName": "TIM_8160a9c1"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-App<DesignPattern>",
+            "request": "launch",
+            "mainClass": "app.App",
+            "projectName": "DesignPattern"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<DesignPattern>",
+            "request": "launch",
+            "mainClass": "iterator.Main",
+            "projectName": "DesignPattern"
+        }
+    ]
+}
