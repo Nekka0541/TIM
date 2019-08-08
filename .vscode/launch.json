@@ -6,41 +6,6 @@
     "configurations": [
         {
             "type": "java",
-            "name": "CodeLens (Launch) - lesson",
-            "request": "launch",
-            "mainClass": "stringb.lesson",
-            "projectName": "StringOperation"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - Main",
-            "request": "launch",
-            "mainClass": "stringb.Main",
-            "projectName": "StringOperation"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - sb",
-            "request": "launch",
-            "mainClass": "Java.StringOperation.src.stringb.sb",
-            "projectName": "TIM_8160a9c1"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - sb",
-            "request": "launch",
-            "mainClass": "Java.StringOperation.src.app.sb",
-            "projectName": "TIM_8160a9c1"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - App",
-            "request": "launch",
-            "mainClass": "Java.StringOperation.src.app.App",
-            "projectName": "TIM_8160a9c1"
-        },
-        {
-            "type": "java",
             "name": "Debug (Launch) - Current File",
             "request": "launch",
             "mainClass": "${file}"
@@ -58,6 +23,20 @@
             "request": "launch",
             "mainClass": "iterator.Main",
             "projectName": "DesignPattern"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-lesson<StringOperation>",
+            "request": "launch",
+            "mainClass": "stringb.lesson",
+            "projectName": "StringOperation"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-sb<StringOperation>",
+            "request": "launch",
+            "mainClass": "stringb.sb",
+            "projectName": "StringOperation"
         }
     ]
 }

@@ -1,4 +1,4 @@
-package iterator;
+package DesignPattern.src.iterator;
 
 /**
  * Iteratorインターフェースを作成

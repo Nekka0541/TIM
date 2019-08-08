@@ -1,3 +1,5 @@
+package stringb;
+
 public class sb {
     public static void main(String[] args){
         StringBuilder sb = new StringBuilder();
@@ -5,5 +7,6 @@ public class sb {
             sb.append("Java");
         }
         String s = sb.toString();
+        System.out.println(s);
     }
 }

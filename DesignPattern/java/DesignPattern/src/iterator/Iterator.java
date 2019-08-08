@@ -1,4 +1,4 @@
-package iterator;
+package DesignPattern.src.iterator;
 
 /**
  * 数え上げ、走査（スキャン）を行うインターフェース

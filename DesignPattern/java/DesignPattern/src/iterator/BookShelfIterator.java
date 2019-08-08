@@ -1,4 +1,4 @@
-package iterator;
+package DesignPattern.src.iterator;
 
 public class BookShelfIterator implements Iterator{
     private BookShelf bookShelf;
@@ -20,5 +20,5 @@ public class BookShelfIterator implements Iterator{
         index++;
         return book;
     }
-    
+
 }

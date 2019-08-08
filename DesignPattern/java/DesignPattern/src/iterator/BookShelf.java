@@ -1,4 +1,4 @@
-package iterator;
+package DesignPattern.src.iterator;
 
 /**
  * このクラスにいろいろんな処理が集まってくる
