@@ -24,10 +24,13 @@
   - PLantUMLのソースまとめ
 
 - Java
-	- スッキリJava実践編
+  - スッキリJava実践編
+
+- JavaScript
+  - 
 
 - Node.js
-    - [基礎から学ぶNode.js](http://gihyo.jp/dev/serial/01/nodejs)
+  - [基礎から学ぶNode.js](http://gihyo.jp/dev/serial/01/nodejs)
 
 ## Categories
 
