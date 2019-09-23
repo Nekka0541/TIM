@@ -4,7 +4,7 @@ import java.time.Instant;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 
-public class TimeMain {
+public class InstantandZonedDateTimeSample {
 
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
@@ -34,5 +34,7 @@ public class TimeMain {
 		if(z2.isEqual(z3)) {
 			System.out.println("これらは同じ瞬間を指しています。");
 		}
+
+
 	}
 }
