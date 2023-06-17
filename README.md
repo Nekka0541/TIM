@@ -10,7 +10,7 @@
     - [PlantUML](#plantuml)
     - [Java](#java)
     - [Node.js](#nodejs)
-    - [C#](#c#)
+    - [C#](#c)
     - [Docker](#docker)
 ## Plans
 
@@ -63,7 +63,7 @@
 - [Node.jsとは](./Docs/Nodejs/WhatNodejs.md)
 
 ### C#
-- [C#と.NET Framework](./Docs/C#/C#andNetFramework.md)
+- [C#と.NET Framework](./Docs/C♯/C♯andNetFramework.md)
 
 ### Docker
 - [押さえておきたいシステムとインフラの基礎知識](./Docs/Docker/SystemandInfrastructure.md)
