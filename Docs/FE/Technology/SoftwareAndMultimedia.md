@@ -39,3 +39,5 @@ Application Program Interfaceは、アプリケーションからOSが用意す�
 OSSを組み合わせてパッケージ化して再頒布する団体を**ディストリビュータ**という。
 
 #### OSSのライセンス
+OSSを利用する際のライセンス条件の代表的なものにBSDがある（Berkeley Software Distribution）ライセンスとGPL(GNU General Public License)がある
+- BSDライセンス
