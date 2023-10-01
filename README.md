@@ -12,6 +12,7 @@
     - [Node.js](#nodejs)
     - [C#](#c)
     - [Docker](#docker)
+    - [Game](#game)
 ## Plans
 
 - FE
@@ -41,6 +42,10 @@
 - Docker
     - [プログラマのためのDocker](https://www.amazon.co.jp/プログラマのためのDocker教科書-第2版-インフラの基礎知識-コードによる環境構築の自動化-WINGSプロジェクト阿佐-ebook/dp/B07BHK5KX7/ref=dp_kinw_strp_1/355-9845783-2750468)
     - C#,SQLServerを構築するためにいちから勉強
+
+- Game
+  - ゲーム攻略
+
 ## Categories
 
 ### FE
@@ -73,3 +78,8 @@
 - [Dockerコマンド](./Docs/Docker/DockerCommand.md)
 - [Dockerfileを使ったコードによるサーバ構築](./Docs/Docker/Dockerfile.md)
 - [複数コンテナの運用管理](./Docs/Docker/MultipleContainers.md)
+
+
+### Game
+- [SF6](./Docs/game/SF6/SF6.md)
+- [シノビガミ](./Docs/game/シノビガミ/シノビガミ.md)

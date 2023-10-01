@@ -25,6 +25,7 @@
 
 ### コンピュータ構成要素
 - [コンピュータ構成要素](./Technology/ComputerComponent.md)
+- [ソフトウェアとマルチメディア](./Technology/SoftwareAndMultimedia.md)
 ## マネジメント
 
 ## ストラテジ

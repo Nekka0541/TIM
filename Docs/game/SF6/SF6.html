@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SF6.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="sf6">SF6</h1>
+<ul>
+<li><a href="#sf6">SF6</a>
+<ul>
+<li><a href="#%E7%B7%B4%E7%BF%92%E3%83%A1%E3%83%A2">練習メモ</a></li>
+<li><a href="#%E7%94%A8%E8%AA%9E%E9%9B%86">用語集</a></li>
+<li><a href="#%E3%83%81%E3%83%A5%E3%83%B3%E3%83%AA%E3%83%BC">チュンリー</a>
+<ul>
+<li><a href="#%E6%94%BB%E7%95%A5%E3%83%A1%E3%83%A2">攻略メモ</a></li>
+<li><a href="#%E5%8F%8D%E7%9C%81%E7%82%B9%E6%88%90%E9%95%B7%E7%82%B9">反省点、成長点</a></li>
+<li><a href="#%E3%82%B3%E3%83%B3%E3%83%9C%E3%83%AC%E3%82%B7%E3%83%94">コンボレシピ</a>
+<ul>
+<li><a href="#%E8%A1%A8%E8%A8%98%E8%AA%AC%E6%98%8E">表記説明</a></li>
+<li><a href="#%E5%9F%BA%E6%9C%AC">基本</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="%E7%B7%B4%E7%BF%92%E3%83%A1%E3%83%A2">練習メモ</h2>
+<ul>
+<li>ヒット確認練習方法
+<ul>
+<li>トレモでガードをランダムに設定して練習</li>
+<li>ガード時はコンボ数表記に何も表示されないので、そこで止める様意識する。</li>
+</ul>
+</li>
+<li>重ね
+<ul>
+<li>画面端にして、反撃設定 &gt; ダウンリバーサル &gt; しゃがみ弱P</li>
+<li>しゃがみ弱Pの暴れに対応したコンボ、投げを練習しておく</li>
+</ul>
+</li>
+<li>対空練習
+<ul>
+<li>簡単練習で、スロット456ONにする。</li>
+<li>スロット7も使ってインパクトを設定したらよき</li>
+</ul>
+</li>
+<li>差し替えし</li>
+</ul>
+<h2 id="%E7%94%A8%E8%AA%9E%E9%9B%86">用語集</h2>
+<ul>
+<li><a href="https://sf6wiki.com/?%E7%94%A8%E8%AA%9E%E9%9B%86#je786bab">格ゲー用語</a></li>
+</ul>
+<h2 id="%E3%83%81%E3%83%A5%E3%83%B3%E3%83%AA%E3%83%BC">チュンリー</h2>
+<h3 id="%E6%94%BB%E7%95%A5%E3%83%A1%E3%83%A2">攻略メモ</h3>
+<ul>
+<li>暴れつぶしはっけい（4HP）
+<ul>
+<li>思ったより攻撃判定が長くつくので、画面端とかに追い詰めたりダウンさせたときに弱KPが届かない位距離取って打つのが強い（カウンター付く）</li>
+</ul>
+</li>
+<li>ガード後暴れつぶし（中距離　HPががっつりあたるくらい）
+<ul>
+<li>通常技キャンセル（6MP,2MK,2MP） &gt; 構え &gt; dlMK &gt; 弱秘孔拳</li>
+<li>考えてみたけど、構え後攻撃って警戒しそうだからずっとガードかも</li>
+</ul>
+</li>
+<li>下強P（2HP）
+<ul>
+<li>垂直飛び見てから打つとよい</li>
+<li>2HP &gt; 214P.LK &gt; 22HK　のコンボがつながる。〆は中スピバでも可</li>
+</ul>
+</li>
+<li>弱秘孔拳
+<ul>
+<li>秘孔拳と一緒に寄ってって、相手が飛んだところに対空仕込むのあり寄りの有馬記念</li>
+</ul>
+</li>
+</ul>
+<h3 id="%E5%8F%8D%E7%9C%81%E7%82%B9%E6%88%90%E9%95%B7%E7%82%B9">反省点、成長点</h3>
+<ul>
+<li>反省点
+<ul>
+<li>ヒット確認</li>
+<li>SA選択</li>
+<li>SAぶっぱタイミング
+<ul>
+<li>どうも狙いすぎて変なタイミングで打ってる</li>
+</ul>
+</li>
+<li>パリィのタイミング
+<ul>
+<li>詰められて投げられそうな距離でパリィするのはｲｸﾅｲ</li>
+<li>至近距離は逆にありだと思う</li>
+</ul>
+</li>
+<li>コンボでガードされてる時に必殺技や、大、中攻撃はふらない
+<ul>
+<li>隙がでかいから飛ばれる</li>
+</ul>
+</li>
+<li>起き攻めのタイミングが分ってない</li>
+<li>中足キャンセルはざんしゅう
+<ul>
+<li>入ってるとこ見たことないぞ？多分コマンドミス</li>
+</ul>
+</li>
+<li>インパクト返し</li>
+<li>追突拳キャンセル
+<ul>
+<li>追突拳＞強天昇脚出せるようにしたい ←ムズイから中百裂でok</li>
+</ul>
+</li>
+<li>空投げ
+<ul>
+<li>癖になっちゃってる。</li>
+<li>基本相手が前ジャンした時に後ろ飛びで使うのがいいと思う</li>
+</ul>
+</li>
+<li>飛び
+<ul>
+<li>もっと減らしていい。</li>
+<li>困ったときに飛びに頼ると対空食らう。</li>
+<li>隙見て飛ぶ分には良い</li>
+</ul>
+</li>
+<li>飛び道具対応
+<ul>
+<li>ガードするのはいいけど、詰められて投げとかに移行されると辛いから、そういう時は前ジャンしてめくるのあり</li>
+</ul>
+</li>
+<li>画面端
+<ul>
+<li>自分が端背負った時てんぱり過ぎてボタン連打しちゃってる。</li>
+<li>おちんつけ</li>
+<li>基本ガード、投げ抜けねらいでヨシ</li>
+<li>自分が飛んで入れ替える時もしっかりタイミングよく攻撃ボタンでめくりだ</li>
+</ul>
+</li>
+<li>ダウン取った後
+<ul>
+<li>前ステで寄ってほぼ100％相手の暴れを食らってる。</li>
+<li>こういう時こそちょっと距離取って4HP 発勁とか2MP　丹頂拳を使おう</li>
+</ul>
+</li>
+<li>OD 百裂脚 &gt; 百裂連脚
+<ul>
+<li>OD百裂ガードされてるのに出す必要ない。-13Fはやべえ
+<blockquote>
+<p>OD百裂ガードは-3Fだから、リバーサルで4F技出されてもガード間に合う</p>
+</blockquote>
+</li>
+<li>これめっちゃ多いから百裂ガードされたらこっちもすぐガード入力しよう</li>
+</ul>
+</li>
+<li>対空意識しすぎて強天昇脚がモレル
+<ul>
+<li>がまん、、、おちつけ</li>
+</ul>
+</li>
+<li>無敵技（OD天昇脚）のタイミング
+<ul>
+<li>無敵が1~7Fまでにしかついてないから、見てから出す方がいい</li>
+<li>画面端とかで追い込まれてる時の対空は弱でいい（発生F重視）</li>
+</ul>
+</li>
+<li>対空
+<ul>
+<li>練習しよ、、、</li>
+<li>CPU戦やった方いいかも</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>成長したとこ
+<ul>
+<li>コンボ</li>
+<li>ガード
+<ul>
+<li>ジャンプ攻撃をしっかり立ちガードできるようになった</li>
+<li>下段も受けれるようになった。</li>
+</ul>
+</li>
+<li>空投げ
+<ul>
+<li>いい感じに出てるけど、出しどころ注意</li>
+<li>やっぱ相手が画面端から前ジャンの時がいい
+<ul>
+<li>基本その場面だけでいいんじゃないかな</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="%E3%82%B3%E3%83%B3%E3%83%9C%E3%83%AC%E3%82%B7%E3%83%94">コンボレシピ</h3>
+<h4 id="%E8%A1%A8%E8%A8%98%E8%AA%AC%E6%98%8E">表記説明</h4>
+<ul>
+<li>L
+<ul>
+<li>Light</li>
+<li>弱</li>
+</ul>
+</li>
+<li>M
+<ul>
+<li>Middle</li>
+<li>中</li>
+</ul>
+</li>
+<li>H
+<ul>
+<li>Heavy</li>
+<li>強</li>
+</ul>
+</li>
+<li>(c)
+<ul>
+<li>corner only</li>
+<li>画面端</li>
+</ul>
+</li>
+<li>(nc)
+<ul>
+<li>not corner</li>
+</ul>
+</li>
+<li>dl
+<ul>
+<li>delay</li>
+<li>遅らせ</li>
+</ul>
+</li>
+<li>LP(H)
+<ul>
+<li>Hold down L Punch button</li>
+<li>弱パンチ長押し</li>
+</ul>
+</li>
+<li>MK(R)
+<ul>
+<li>中キックボタンを離す</li>
+<li>Release M Kick button</li>
+</ul>
+</li>
+<li>MP(M)
+<ul>
+<li>Mash H Punch button</li>
+<li>強パン連打</li>
+</ul>
+</li>
+<li>ch
+<ul>
+<li>counter hit</li>
+<li>カウンターヒット</li>
+<li>カウンター時には有利</li>
+</ul>
+</li>
+<li>pc
+<ul>
+<li>punish counter</li>
+<li>パニッシュカウンター</li>
+</ul>
+</li>
+<li>J
+<ul>
+<li>Jump</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>レバー入力はテンキーで表す。</p>
+</blockquote>
+<h4 id="%E5%9F%BA%E6%9C%AC">基本</h4>
+<blockquote>
+<p>【】の中はダメージ数</p>
+</blockquote>
+<ul>
+<li>
+<p>2LK始動</p>
+<ul>
+<li>2LK &gt; 2LP &gt; (2)8LK 【1269】
+<ul>
+<li>(2)は溜め</li>
+</ul>
+</li>
+<li>2LK &gt; LP &gt; 22HK【1430】</li>
+</ul>
+</li>
+<li>
+<p>JHK始動</p>
+<ul>
+<li>JHK &gt; MP &gt; 2MP &gt; (2)8MK【2720】
+<ul>
+<li>ダメージ落ちるけど、236MK（百裂脚）でも可</li>
+</ul>
+</li>
+<li>JHK &gt; 4HP &gt; 214P.HK &gt; jcJ2MK &gt; JMP &gt; J236HK【3100】
+<ul>
+<li>214Pは行雲流水の構え、からの強Kで打ち上げのち追いかけジャンプ※小文字jcは恐らく追いかけジャンプ？</li>
+<li>214P.HK &gt; jcJ2MK &gt; JMP &gt; J236HK【2010】</li>
+</ul>
+</li>
+<li>(c)JHK &gt; 4HP &gt; 236HK &gt; 22HK【3240】
+<ul>
+<li>画面端のみ</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>HK始動</p>
+<ul>
+<li>HK &gt; 214P.HK &gt; jcJ2MKx2 &gt; J236HK</li>
+</ul>
+</li>
+<li>
+<p>4HP始動</p>
+<ul>
+<li>4HP &gt; 214P.HK &gt; jcJ2MKx2 &gt; J236HK</li>
+</ul>
+</li>
+<li>
+<p>2HP始動</p>
+<ul>
+<li>214P.HK &gt; jcJ2MKx2 &gt; J236HK</li>
+<li>214P.LK &gt; (2)8MK</li>
+</ul>
+</li>
+<li>
+<p>3HK</p>
+<ul>
+<li>3HK &gt; 2MP &gt; (2)8MK【2360】</li>
+</ul>
+</li>
+<li>
+<p>USE OD</p>
+<ul>
+<li>2LK &gt; LPx2 &gt; 236KK.KK　【1690】</li>
+<li>214KK &gt; 22HK【2160】</li>
+<li>JHK &gt; MP &gt; 2MP &gt; (2)8KK &gt; 214MK</li>
+<li>MPMK.66.4HPpc &gt; 214HK &gt; 2MP &gt; (2)8KK &gt; MPMK.66.LP &gt; 236HK &gt; 22HK 【4181】
+<ul>
+<li>パニッシュカウンター始動</li>
+</ul>
+</li>
+<li>JHK &gt; MP &gt; 2MP &gt; (2)8KK &gt; MPMK.66.LP &gt; 236HK &gt; 22HK【3421】</li>
+</ul>
+</li>
+<li>
+<p>SA</p>
+<ul>
+<li>ODスピバ、ODはざんしゅうからであれば全部のSA技が入る</li>
+<li>基本
+<ul>
+<li>(c)JHK &gt; MP &gt; 2MP &gt; (2)8KK &gt; 214MK &gt; 214214P or</li>
+<li>2MK &gt; 236KK &gt; 236236K &gt; 9j &gt; dl2MKx2 &gt; 214MK</li>
+</ul>
+</li>
+<li>空中
+<ul>
+<li>4HP &gt; 214P.HK &gt; jcJHPx2 &gt; 236236P【3270】</li>
+</ul>
+</li>
+<li>ラッシュ絡め
+<ul>
+<li>2LP &gt; MP &gt; 2MP &gt; 2(8)KK &gt; MPMK.66.LP &gt; 214P.MK &gt; 66.HP &gt; 214P.MK &gt; 214214P【5000くらい？】
+<blockquote>
+<p>Dゲージフル消費;;</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>カウンター</p>
+<ul>
+<li>236KK &gt; 2LK &gt; (2)8LK</li>
+</ul>
+</li>
+<li>
+<p>パニッシュカウンター</p>
+<ul>
+<li>236KK &gt; 2MK &gt; 2(8)MK</li>
+</ul>
+</li>
+<li>
+<p>画面端</p>
+<ul>
+<li>2HP &gt; 214P.LK &gt; 2(8)KK &gt; 236LK &gt; 22HK
+<ul>
+<li>画面端に投げて距離が離れた後にも使える</li>
+</ul>
+</li>
+<li>ドライブインパクト始動
+<ul>
+<li>HKHP &gt; 4HP &gt; 236HK &gt; 22HK or 22KK</li>
+<li>HKHP &gt; 4HP &gt; 236HK &gt; 236236K &gt; jcJ2MK &gt; JMP &gt; J236HK ?</li>
+<li>HKHP &gt; 4HP &gt; 236HK &gt; 214214K</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>ドライブラッシュ絡め</p>
+<ul>
+<li>MPMK.66.MP &gt; 2MP &gt; (2)8KK &gt; 236MK &gt; 22HK</li>
+<li>後ろ受け身ナシの場合
+<ul>
+<li>2MK &gt; 236KK &gt; KK &gt;
+<ul>
+<li>MPMK.66.MP &gt; 2MP &gt; (2)8MK</li>
+<li>MPMK.66.2LK &gt; 2LP &gt; 2LP &gt; (2)8LK</li>
+<li>MPMK.66.4HP &gt; MP &gt; 2MP &gt; (2)8MK
+<ul>
+<li>起き上がり中段だから強そう</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>MP &gt; 2MP &gt; 236KK.KK &gt; MPMK.66.MP &gt; 2MP &gt; (2)8MK</li>
+</ul>
+</li>
+<li>
+<p>暴れ</p>
+<ul>
+<li>2LP &gt; (2)8LK &gt; 66.6（起き攻め）</li>
+</ul>
+</li>
+<li>
+<p>キャンセルラッシュ絡め</p>
+<ul>
+<li>2MK &gt; 66.MP &gt; 4HP &gt; 214P.LK &gt; (2)8MK</li>
+</ul>
+</li>
+</ul>
+
+</body>
+</html>
