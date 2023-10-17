@@ -55,5 +55,40 @@ public class Q5Impl extends Q5{
         System.out.println(num);
     }
 }
+```
+   1. 0が表示される
+   2. １０が表示される
+   3. コンパイルエラーが発生する
+   4. 実行時に例外がスローされる
+- Answer
+  - 3. コンパイルエラーが発生する
+- 結果
+
+```PowerShell
+PS E:\Users\akira\Documents\TIM\Docs\Java\Silver\Part1> javac .\Q5.java
+PS E:\Users\akira\Documents\TIM\Docs\Java\Silver\Part1> java .\Q5.java 
+エラー: クラスにmain(String[])メソッドが見つかりません: Q5
+PS E:\Users\akira\Documents\TIM\Docs\Java\Silver\Part1> javac .\Q5Impl.java
+.\Q5Impl.java:2: エラー: シンボルを見つけられません
+public class Q5Impl extends Q5{
+                            ^  
+  シンボル: クラス Q5
+.\Q5Impl.java:4: エラー: シンボルを見つけられません
+        System.out.println(num);
+                           ^    
+  シンボル:   変数 num
+  場所: クラス Q5Impl
+エラー2個
 
 ```
+- 解説
+  - パッケージとクラスのアクセス制御に関する問題
+  - 無名パッケージ（パッケージ宣言しない）に属するクラスは、同じ無名パッケージに属するクラスからしかアクセスできません。
+    例　同じ無名パッケージに属するPersonとOffice
+    ```java
+    class Person {}
+    public class Office {
+        Person p;
+    }
+    ```
+    - 設問のように明示的にパッケージ宣言をしたクラスからは上記の無名パッケージのクラスを使えず、コンパイルエラーが起きる。
