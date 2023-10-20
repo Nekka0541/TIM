@@ -2,8 +2,9 @@
 
 - [目次](#目次)
   - [テクノロジ](#テクノロジ)
-    - [基礎理論](#基礎理論)
     - [コンピュータ構成要素](#コンピュータ構成要素)
+    - [ソフトウェアとマルチメディア](#ソフトウェアとマルチメディア)
+    - [基礎理論](#基礎理論)
   - [マネジメント](#マネジメント)
   - [ストラテジ](#ストラテジ)
 
@@ -19,13 +20,13 @@
 2. 少しだけ理解したらすぐ問題を解きまくる。
 > ※全部理解しようとしないで問題を解きつつ理解を深めていくスタイルで！
 
-### 基礎理論
+### [コンピュータ構成要素](./Technology/ComputerComponent.md)
+### [ソフトウェアとマルチメディア](./Technology/SoftwareAndMultimedia.md)
+### [基礎理論](./Technology/BasicTheory/BasicTheory.md)
 - [基数変換](./Technology/BasicTheory/RadixConversion.md)
 - [秒以下の変換](./Technology/BasicTheory/SecondsConversion.md)
 
-### コンピュータ構成要素
-- [コンピュータ構成要素](./Technology/ComputerComponent.md)
-- [ソフトウェアとマルチメディア](./Technology/SoftwareAndMultimedia.md)
+
 ## マネジメント
 
 ## ストラテジ
