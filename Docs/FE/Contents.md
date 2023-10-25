@@ -5,6 +5,7 @@
     - [コンピュータ構成要素](#コンピュータ構成要素)
     - [ソフトウェアとマルチメディア](#ソフトウェアとマルチメディア)
     - [基礎理論](#基礎理論)
+    - [アルゴリズムとプログラミング](#アルゴリズムとプログラミング)
   - [マネジメント](#マネジメント)
   - [ストラテジ](#ストラテジ)
 
@@ -25,6 +26,7 @@
 ### [基礎理論](./Technology/BasicTheory/BasicTheory.md)
 - [基数変換](./Technology/BasicTheory/RadixConversion.md)
 - [秒以下の変換](./Technology/BasicTheory/SecondsConversion.md)
+### [アルゴリズムとプログラミング](./Technology/AlgorithmAndProgramming.md)
 
 
 ## マネジメント
