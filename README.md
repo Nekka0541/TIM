@@ -42,7 +42,7 @@
 - Docker
     - [プログラマのためのDocker](https://www.amazon.co.jp/プログラマのためのDocker教科書-第2版-インフラの基礎知識-コードによる環境構築の自動化-WINGSプロジェクト阿佐-ebook/dp/B07BHK5KX7/ref=dp_kinw_strp_1/355-9845783-2750468)
     - C#,SQLServerを構築するためにいちから勉強
-
+    - [サーバとかもっと抽象化したとこから学ぼう](https://www.r-staffing.co.jp/engineer/entry/20230707_1)
 - Game
   - ゲーム攻略
 

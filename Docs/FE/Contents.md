@@ -6,6 +6,7 @@
     - [ソフトウェアとマルチメディア](#ソフトウェアとマルチメディア)
     - [基礎理論](#基礎理論)
     - [アルゴリズムとプログラミング](#アルゴリズムとプログラミング)
+    - [システム構成](#システム構成)
   - [マネジメント](#マネジメント)
   - [ストラテジ](#ストラテジ)
 
@@ -27,6 +28,7 @@
 - [基数変換](./Technology/BasicTheory/RadixConversion.md)
 - [秒以下の変換](./Technology/BasicTheory/SecondsConversion.md)
 ### [アルゴリズムとプログラミング](./Technology/AlgorithmAndProgramming.md)
+### [システム構成](./Technology/SystemConfiguration.md)
 
 
 ## マネジメント
