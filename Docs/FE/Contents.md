@@ -7,6 +7,8 @@
     - [基礎理論](#基礎理論)
     - [アルゴリズムとプログラミング](#アルゴリズムとプログラミング)
     - [システム構成](#システム構成)
+    - [データベース技術](#データベース技術)
+    - [ネットワーク技術](#ネットワーク技術)
   - [マネジメント](#マネジメント)
   - [ストラテジ](#ストラテジ)
 
@@ -29,6 +31,8 @@
 - [秒以下の変換](./Technology/BasicTheory/SecondsConversion.md)
 ### [アルゴリズムとプログラミング](./Technology/AlgorithmAndProgramming.md)
 ### [システム構成](./Technology/SystemConfiguration.md)
+### [データベース技術](./Technology/DataBaseTechnology.md)
+### [ネットワーク技術](./Technology/NetworkTechnology.md)
 
 
 ## マネジメント
