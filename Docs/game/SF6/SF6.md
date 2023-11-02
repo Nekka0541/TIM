@@ -305,3 +305,8 @@ https://youtu.be/L7Ezozdb9DE
       - SA1(5114)
       - SA2 > jc9 > HPHP(5444)
       - SA3(6604)
+- 4HP 簡単
+  - 4HPpc > 214P.MK > (2)8KK
+    - 22HK
+    - SA
+    - 236LK(c) > 22HK
