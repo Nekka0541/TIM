@@ -399,6 +399,7 @@ https://youtu.be/L7Ezozdb9DE
 #### 投げつぶし
 - 2HP
   - DRゲージ全消費
+  - 画面端限定
   - [URL](https://youtu.be/aR7SdgV_oM8?list=PLKjAi9IEWPhqMh9hmYQk8pR8yqxiE733d&t=1447)
     - 2HPpc > 214P.MK > (4)6PP > MP > 2MP > MPMK.66.2HP > 214P.MK > MPMK.66.4HP > 214P.HK > jc9 > J2MK > J2MKdl > HP > HP > 
       - 236236P(4907)
@@ -419,14 +420,24 @@ https://youtu.be/L7Ezozdb9DE
     - ※中央からだとod気功→立ち弱K→cDR立ちコパ→発勁→構え大K…とルートが変わる。ちな端と中央で200位しかダメージ変わんないよ 
   - DR1消費
     - DR4HPpc > 214P.MK > (2)8MK(3480)
-- HK
+- HK(通常食らいがリバサ反撃位しかチャンス無いよね)
+  - ダメージはDRはっけいに負けるが、圧倒的に当てやすい（キャラによって距離の差がない）為、実践ではこっち使っていきたい
   - DR2消費
-  - HK 簡単
     - HKpc > 214P.MK > (2)8KK
       - 22HK
       - SA(5320)
       - 236LK(c) > 22HK
+  - DR4消費(BO)
+    - 端限定
+      - HKpc > 214P.MK > (4)6PP > MP > 2MP > DR2HP > 214.PMK > DR4HP > 214P.HK > エリアル
+        - SA3（6397）
+        - DR2HPからそのままエリアルに繋ぐと、DR3で済む(6122)
+    - 中央(DR3)
+      -  HKpc > 214P.MK > (4)6PP > LK > DRLP > 4HP > 214P.> 214P.HK > エリアル
+        - SA3（5663）
+      - 火力もあんまないから、基本中央はODスピバのコンボで良さそう
 
+  
 - ゲージなし
   - 普通に起き攻め
     - HKpc > 214P.MK > (2)8MK
@@ -443,8 +454,9 @@ https://youtu.be/L7Ezozdb9DE
 
 #### スタン
 - ゲージ3本から可（DIでスタン）
-  - 歩き＞j~~HK~~HPdl > HK > 214P.MK > (4)6PP > MP > 2MP > DR2HP > 214P.HK > jc9 > J2MK > J2MKdl > HP > HP
-    - > 頭のjHPは遅らせ必要（14F稼ぐため）
+  - 歩き＞~~jHKHPdl >~~ HK > 214P.MK > (4)6PP > MP > 2MP > DR2HP > 214P.HK > jc9 > J2MK > J2MKdl > HP > HP
+    - ~~> 頭のjHPは遅らせ必要（14F稼ぐため）~~
+    - 5571ダメージ（jHKからでも5706で130位しか変わらんから安定するHKからのルートでいい）
     - SA各種
     - そのまま詐欺飛び
 
