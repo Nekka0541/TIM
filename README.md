@@ -19,6 +19,7 @@
 > - markdown preview enhanced(プレビュー見やすくする)
 > - markdown pdf(PDFやHTMLにエクスポート)
 > - markdown table(md表を書きやすくする)
+> - Paste Image（画像の貼り付け ctrl+alt+v）
 
 
 - FE
