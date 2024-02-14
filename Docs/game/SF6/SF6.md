@@ -451,10 +451,12 @@ https://youtu.be/L7Ezozdb9DE
   - 2HP > 214P.LK > 2(8)KK > 236LK > 22HK
     - 画面端に投げて距離が離れた後にも使える
   - ドライブインパクト始動
-    - HKHP > 4HP > 236HK > 22HK or 22KK
-    - HKHP > 4HP > 236HK > 236236K > jcJ2MK > JMP > J236HK ?
-    - HKHP > 4HP > 236HK > 214214K
-
+    - 基本（ゲージ未使用）
+      - 4HP > 236HK > 22HK
+    - ダメージ伸ばすとき
+      - DR > 2HP > 236HK > DR > 2MP > 236HK
+        - 22HK
+        - SAとか
 - ドライブラッシュ絡め
   - MPMK.66.MP > 2MP > (2)8KK > 236LK > 22HK
   - MPMK.66.3HP > 2MP > (2)8KK > 236LK > 22HK
