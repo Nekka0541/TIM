@@ -13,6 +13,7 @@
     - [C#](#c)
     - [Docker](#docker)
     - [Game](#game)
+    - [Eng](#eng)
 ## Plans
 > 追加したExtension（vscode）
 > - markdownallinone(markdownのいろいろ)
@@ -52,6 +53,8 @@
     - [サーバとかもっと抽象化したとこから学ぼう](https://www.r-staffing.co.jp/engineer/entry/20230707_1)
 - Game
   - ゲーム攻略
+- Eng
+  - 英語学習（中学から）
 
 ## Categories
 
@@ -91,3 +94,6 @@
 ### Game
 - [SF6](./Docs/game/SF6/SF6.md)
 - [シノビガミ](./Docs/game/シノビガミ/シノビガミ.md)
+
+### Eng
+- [基礎](./Docs/Eng/Foundation.md)
