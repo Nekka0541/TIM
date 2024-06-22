@@ -8,5 +8,6 @@
 	</classpathentry>
 	<classpathentry kind="src" path="Docs/Java/Silver/Part1"/>
 	<classpathentry kind="src" path="Docs/Java/Effective/TestCode/StaticFactoryMethodTest"/>
+	<classpathentry kind="src" path="Docs/Java/seaside"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
