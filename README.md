@@ -14,6 +14,7 @@
     - [Docker](#docker)
     - [Game](#game)
     - [Eng](#eng)
+    - [Math](#math)
 ## Plans
 > 追加したExtension（vscode）
 > - markdownallinone(markdownのいろいろ)
@@ -55,7 +56,8 @@
   - ゲーム攻略
 - Eng
   - 英語学習（中学から）
-
+- Math
+  - 数学学習（中学から）
 ## Categories
 
 ### FE
@@ -98,3 +100,6 @@
 
 ### Eng
 - [基礎](./Docs/Eng/Foundation.md)
+
+### Math
+- [正負](./Docs/Math/PlusMinus.md)
