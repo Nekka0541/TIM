@@ -1,9 +1,9 @@
 <div class="container-fluid text-center">
-  <h1 style="margin-top: 5%;">ユーザ管理画面</h1>
+  <h1>ユーザ管理画面</h1>
   <div class="row justify-content-md-center" style="margin-top: 5%;">
     <div class="col-md-auto">
       @if (isDeleteSuccess) {
-      <div class="alert alert-primary" role="alert">Name:{{name?.value}}、ID:{{id}}を削除しました。</div>
+      <div class="alert alert-primary" role="alert">Name:{{name}}、ID:{{id}}を削除しました。</div>
       }
     </div>
   </div>
@@ -11,7 +11,7 @@
   <!-- <div class="row justify-content-md-center" style="margin-top: 5%;"> -->
   <form class="row justify-content-md-center" style="margin-top: 5%;" [formGroup]="controlForm" (ngSubmit)="onSubmit()">
     <div class="col-md-auto">
-      <input id="fName" type="text" class="form-control" placeholder="Nameを入力" formControlName="name" required>
+      <input id="fName" type="text" class="form-control" placeholder="Nameを入力" formControlName="name" required [(ngModel)]="name">
     </div>
     <div class="col-md-auto">
       <select id="fSelectBtn" class="form-select" formControlName="selectBtn" required>
@@ -25,23 +25,14 @@
       <button type="submit" class="btn btn-primary">実行</button>
     </div>
   </form>
-  <p>nameValue: {{ name?.value }}</p>
-  <div class="row justify-content-md-center">
-    <div class="col-md-auto">
-      <table class="table table-bordered">
-        <thead>
-          <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Name</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>{{id}}</td>
-            <td>{{name?.value}}</td>
-          </tr>
-        </tbody>
-      </table>
+  <p>nameValue: {{ controlForm.value }}</p>
+  <p>Form Status: {{ controlForm.status }}</p>
+  <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+    <div *ngIf="name.hasError('minLength')">
+      Name must be at least 4 characters long.
+    </div>
+    <div *ngIf="name.hasError('required')">
+      Name is required.
     </div>
   </div>
 </div>

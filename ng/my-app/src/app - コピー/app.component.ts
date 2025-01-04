@@ -13,25 +13,30 @@ import { NgIf } from '@angular/common';
 export class AppComponent implements OnInit {
   title = 'my-app';
   theme = 'dark';
-  id! : null;
+  id = 'Test';
   isFormValid: any;
   isDeleteSuccess: boolean = true;
   // name = new FormControl('');
-  // private formBuilder = inject(FormBuilder);
+  private formBuilder = inject(FormBuilder);
   controlForm!: FormGroup;
 
   ngOnInit(): void {
-    this.controlForm = new FormGroup({
-      name: new FormControl(''),
-      selectBtn: new FormControl(''),
+    // controlForm = new FormGroup({
+
+    //   name: new FormControl(''),
+    //   selectBtn: new FormControl('')
+    // });
+    this.controlForm = this.formBuilder.group({
+      name: ['', [Validators.required, Validators.minLength(4)]],
+      selectBtn: ['', [Validators.required, Validators.pattern('[1-3]')]],
     });
   }
   onSubmit() {
     console.warn(this.controlForm.value);
     console.log(this.controlForm.errors); // {pattern: {requiredPattern: '^[a-zA-Z ]*$', actualValue: '1'}}
   }
-  get name(){
-    return this.controlForm.get('name');
+  get name(): FormControl {
+    return this.controlForm.get('name') as FormControl
   }
 
 }
