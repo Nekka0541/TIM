@@ -12,6 +12,10 @@
   <form class="row justify-content-md-center" style="margin-top: 5%;" [formGroup]="controlForm" (ngSubmit)="onSubmit()">
     <div class="col-md-auto">
       <input id="fName" type="text" class="form-control" placeholder="Nameを入力" formControlName="name" required>
+      <div class="name-danger"
+        *ngIf="controlForm.controls['name'].invalid && (controlForm.controls['name'].touched || controlForm.controls['name'])">
+        <span *ngIf="controlForm.controls['name'].errors?.['required']">これは必須項目です</span>
+      </div>
     </div>
     <div class="col-md-auto">
       <select id="fSelectBtn" class="form-select" formControlName="selectBtn" required>
@@ -24,25 +28,23 @@
     <div class="col-md-auto">
       <button type="submit" class="btn btn-primary">実行</button>
     </div>
-  </form>
-  <p>nameValue: {{ name?.value }}</p>
-  <div class="row justify-content-md-center">
-    <div class="col-md-auto">
-      <table class="table table-bordered">
-        <thead>
-          <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Name</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>{{id}}</td>
-            <td>{{name?.value}}</td>
-          </tr>
-        </tbody>
-      </table>
+    <p>nameValue: {{ name?.value }}</p>
+    <div class="row justify-content-md-center">
+      <div class="col-md-auto">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{id}}</td>
+              <td>{{name?.value}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
-  </div>
-</div>
-<router-outlet />
+    <router-outlet />

@@ -1,12 +1,12 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
-import { NgIf } from '@angular/common';
+import { CommonModule, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ReactiveFormsModule, NgIf],
+  imports: [RouterOutlet, ReactiveFormsModule, NgIf,FormsModule,CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -22,8 +22,8 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.controlForm = new FormGroup({
-      name: new FormControl(''),
-      selectBtn: new FormControl(''),
+      name: new FormControl("",[Validators.required,Validators.minLength(4)]),
+      selectBtn: new FormControl(""),
     });
   }
   onSubmit() {
