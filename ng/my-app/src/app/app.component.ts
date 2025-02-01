@@ -6,14 +6,16 @@ import { CommonModule, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ReactiveFormsModule, NgIf,FormsModule,CommonModule],
+  imports: [RouterOutlet, ReactiveFormsModule, NgIf, FormsModule, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit {
+  constructor() { }
+
   title = 'my-app';
   theme = 'dark';
-  id! : null;
+  id!: null;
   isFormValid: any;
   isDeleteSuccess: boolean = true;
   // name = new FormControl('');
@@ -22,7 +24,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.controlForm = new FormGroup({
-      name: new FormControl("",[Validators.required,Validators.minLength(4)]),
+      name: new FormControl("", [Validators.required, Validators.minLength(4)]),
       selectBtn: new FormControl(""),
     });
   }
@@ -30,8 +32,16 @@ export class AppComponent implements OnInit {
     console.warn(this.controlForm.value);
     console.log(this.controlForm.errors); // {pattern: {requiredPattern: '^[a-zA-Z ]*$', actualValue: '1'}}
   }
-  get name(){
+  get name() {
     return this.controlForm.get('name');
   }
 
+}
+
+/**
+ * ユーザ情報
+ */
+export class UserInfo{
+  id?: number;
+  name?: string;
 }
